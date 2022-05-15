@@ -1,0 +1,56 @@
+/* * {
+    overflow: hidden;
+} */
+
+body {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;    
+}
+
+.container {
+    width: 100vw !important;
+    height: 84vh !important;
+    display: flex !important;
+    flex-direction: column !important; 
+    /* row */
+    align-items: center !important;
+}
+     
+
+.inputContainer {
+    width: 50%;  
+}
+
+form {
+    display: flex;
+    flex-direction: column;   
+}
+
+.input {
+
+}
+
+.todos {
+    width: 98vw;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+
+.card {
+    margin: 20px !important;
+}
+
+.list-group-item {
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.list-group-item:hover {
+    background-color: lightgray !important ;
+}
+
