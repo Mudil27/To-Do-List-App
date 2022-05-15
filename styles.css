@@ -4,10 +4,15 @@
 
 body {
     padding: 20px;
+    /* background-image: url('download2.jpg'); */
+    background-image: url('todo1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
-    text-align: center;    
+    text-align: center;   
+    text-decoration: underline; 
 }
 
 .container {

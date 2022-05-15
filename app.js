@@ -75,7 +75,7 @@ const createTodo = (value, createTime, entered = false, mapped = false, index) =
           sessionStorage.setItem('todos', JSON.stringify(storedTodos))
         }
       })
-      
+
       todoHeader.innerHTML = newMessage
   })
 }
