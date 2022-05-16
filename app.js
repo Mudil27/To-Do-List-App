@@ -65,18 +65,24 @@ const createTodo = (value, createTime, entered = false, mapped = false, index) =
       let newMessage = prompt('Please Enter new message')
 
       let clickedOnTodo = e.path[2].childNodes[0].innerHTML
+      console.log(newMessage)
       
       console.log(clickedOnTodo)
       const storedTodos = JSON.parse(sessionStorage.getItem('todos'))
       console.log(storedTodos)
       storedTodos.map((todo, index) => {
         if (storedTodos[index].value === clickedOnTodo) {
-          storedTodos[index].value = newMessage
+          if(newMessage) {
+            storedTodos[index].value = newMessage
+          }
           sessionStorage.setItem('todos', JSON.stringify(storedTodos))
         }
       })
 
-      todoHeader.innerHTML = newMessage
+      if(newMessage) {
+        todoHeader.innerHTML = newMessage
+      }
+      
   })
 }
 
