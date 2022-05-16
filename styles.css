@@ -2,12 +2,34 @@
     overflow: hidden;
 } */
 
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
 body {
     padding: 20px;
+    /* background-image: url('todo1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* background-position: fixed; */
+  
+    
+}
+
+/* .body {
+
+    
+} */
+
+/* .body2 {
     background-image: url('todo1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
+    width: 100vw;
+    height: auto;
+
+} */
 
 h1 {
     text-align: center;   
@@ -16,13 +38,30 @@ h1 {
 
 .container {
     width: 100vw !important;
-    height: 84vh !important;
+    height: 100% !important;
     display: flex !important;
     flex-direction: column !important; 
     /* row */
     align-items: center !important;
+   
+
 }
-     
+
+.container::before {
+    background-image: url('todo1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}
+
 
 .inputContainer {
     width: 50%;  
@@ -34,7 +73,7 @@ form {
 }
 
 .input {
-
+    
 }
 
 .todos {
@@ -42,7 +81,13 @@ form {
     display: flex;
     margin-top: 20px;
     justify-content: center;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;   
+    overflow: scroll; 
+    max-height: 63vh;    
+}
+
+.todos::-webkit-scrollbar {
+    display: none;
 }
 
 .card {
